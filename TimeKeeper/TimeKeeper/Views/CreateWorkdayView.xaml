@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TimeKeeper.Views.CreateWorkdayView"
+             xmlns:fab="clr-namespace:Refractored.FabControl">
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal"
+                     WidthRequest="100">
+                <Label Text="Datum"
+                   VerticalOptions="Center"/>
+                <DatePicker />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         WidthRequest="100">
+                <Label Text="Anfang"
+                   VerticalOptions="Center"/>
+                <TimePicker />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         WidthRequest="100">
+                <Label Text="Ende"
+                   VerticalOptions="Center"/>
+                <TimePicker />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                     WidthRequest="100">
+                <Label Text="Arbeitszeit"
+                       VerticalOptions="Center"/>
+                <Label Text="Delta"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
