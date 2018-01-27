@@ -31,7 +31,7 @@ namespace TimeKeeper.ViewModels
 
         private void DoNavigation()
         {
-            _navService.NavigateTo(Constants.Navigation.CreateWorkdayView);
+            _navService.NavigateToModal(Constants.Navigation.CreateWorkdayView);
         }
     }
 }

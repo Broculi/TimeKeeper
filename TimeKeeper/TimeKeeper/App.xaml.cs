@@ -22,9 +22,7 @@ namespace TimeKeeper
 		{
 			InitializeComponent();
 
-            var navigationPage = new NavigationPage(new MainPage());
-            Locator.NavService.Initialize(navigationPage);
-            MainPage = navigationPage;
+            MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()

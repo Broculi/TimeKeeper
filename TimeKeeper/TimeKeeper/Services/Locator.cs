@@ -14,6 +14,7 @@ namespace TimeKeeper.Services
         public Locator()
         {
             // Register view models
+            SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<OverviewViewModel>();
             SimpleIoc.Default.Register<CreateWorkdayViewModel>();
 
@@ -23,6 +24,7 @@ namespace TimeKeeper.Services
         }
 
         // View models
+        public MainPageViewModel MainPageViewModel => SimpleIoc.Default.GetInstance<MainPageViewModel>();
         public OverviewViewModel OverviewViewModel => SimpleIoc.Default.GetInstance<OverviewViewModel>();
         public CreateWorkdayViewModel CreateWorkdayViewModel => SimpleIoc.Default.GetInstance<CreateWorkdayViewModel>();
 

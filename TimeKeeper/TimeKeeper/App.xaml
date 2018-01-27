@@ -7,7 +7,7 @@
         <!-- Application resource dictionary -->
         <ResourceDictionary>
 
-            <Color x:Key="HeadingTextColor">Yellow</Color>
+            <Color x:Key="HeadingTextColor">Green</Color>
             <Color x:Key="Dark">Blue</Color>
             <Color x:Key="Light">Red</Color>
 

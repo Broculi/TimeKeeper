@@ -14,7 +14,7 @@ namespace TimeKeeper.Views
 		public Overview ()
 		{
 			InitializeComponent ();
-
+            
             BindingContext = App.Locator.OverviewViewModel;
         }
 

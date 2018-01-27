@@ -3,13 +3,22 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TimeKeeper"
             xmlns:views="clr-namespace:TimeKeeper.Views"
-            x:Class="TimeKeeper.MainPage">
+            x:Class="TimeKeeper.MainPage"
+            CurrentPageChanged="OnCurrentPageChange">
 
-    <views:Overview />
+    <NavigationPage>
+        <x:Arguments>
+            <views:Overview />
+        </x:Arguments>
+    </NavigationPage>
 
-    <ContentPage Title="Tab1">
+    <NavigationPage>
+        <x:Arguments>
+            <ContentPage Title="Tab1">
 
-    </ContentPage>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
 
     <ContentPage Title="Tab2">
 

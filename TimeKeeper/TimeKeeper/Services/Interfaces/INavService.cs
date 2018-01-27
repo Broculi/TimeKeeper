@@ -9,5 +9,6 @@ namespace TimeKeeper.Services.Interfaces
     public interface INavService : INavigationService
     {
         void Initialize(NavigationPage navigationPage);
+        void NavigateToModal(string pageKey);
     }
 }

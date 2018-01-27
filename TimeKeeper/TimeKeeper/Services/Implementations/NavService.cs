@@ -40,6 +40,8 @@ namespace TimeKeeper.Services.Implementations
             }
         }
 
+        private Page _currentPage => _navigation?.CurrentPage;
+
         public void GoBack()
         {
             if (CanGoBack())
@@ -51,6 +53,33 @@ namespace TimeKeeper.Services.Implementations
         public bool CanGoBack()
         {
             return _navigation?.Navigation?.NavigationStack?.Count > 1;
+        }
+
+        public void NavigateToModal(string pageKey)
+        {
+            lock (_pagesByKey)
+            {
+                if (_pagesByKey.ContainsKey(pageKey))
+                {
+                    var type = _pagesByKey[pageKey];
+
+                    var constructor = GetConstructor(type);
+                    if (constructor == null)
+                    {
+                        var exceptionMessage = $"No suitable constructor found for page {pageKey}";
+                        throw new InvalidOperationException(exceptionMessage);
+                    }
+
+                    var page = constructor.Invoke(null) as Page;
+
+                    _currentPage.Navigation.PushModalAsync(page);
+                }
+                else
+                {
+                    var exceptionMessage = $"No such page: {pageKey}. Did you forget to call NavigationService.Configure?";
+                    throw new ArgumentException(exceptionMessage, nameof(pageKey));
+                }
+            }
         }
 
         public void NavigateTo(string pageKey)
