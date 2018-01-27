@@ -2,30 +2,19 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TimeKeeper"
-            x:Class="TimeKeeper.MainPage"
-            xmlns:fab="clr-namespace:Refractored.FabControl;assembly=Refractored.FabControl">
+            xmlns:views="clr-namespace:TimeKeeper.Views"
+            x:Class="TimeKeeper.MainPage">
+
+    <views:Overview />
 
     <ContentPage Title="Tab1">
-        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
-            <Label Text="Heading"
-               Style="{StaticResource LabelPageHeadingStyle}"/>
-
-            <fab:FloatingActionButtonView
-				ColorNormal="{StaticResource Dark}"
-				ColorPressed="{StaticResource Dark}"
-				ColorRipple="{StaticResource Dark}"
-				x:Name="FloatingActionButtonAdd"
-				IsVisible="True"
-				AbsoluteLayout.LayoutFlags="PositionProportional"
-				AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"/>
-        </AbsoluteLayout>
     </ContentPage>
-    
+
     <ContentPage Title="Tab2">
 
     </ContentPage>
-    
+
     <ContentPage Title="Tab3">
 
     </ContentPage>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TimeKeeper.Views.CreateWorkdayView"
              xmlns:fab="clr-namespace:Refractored.FabControl">
-    <ContentView.Content>
+    <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal"
                      WidthRequest="100">
@@ -33,5 +33,5 @@
                 <Label Text="Delta"/>
             </StackLayout>
         </StackLayout>
-    </ContentView.Content>
-</ContentView>
+    </ContentPage.Content>
+</ContentPage>

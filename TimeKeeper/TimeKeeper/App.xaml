@@ -9,6 +9,7 @@
 
             <Color x:Key="HeadingTextColor">Yellow</Color>
             <Color x:Key="Dark">Blue</Color>
+            <Color x:Key="Light">Red</Color>
 
             <Style x:Key="LabelPageHeadingStyle" TargetType="Label">
                 <Setter Property="FontAttributes" Value="Bold" />

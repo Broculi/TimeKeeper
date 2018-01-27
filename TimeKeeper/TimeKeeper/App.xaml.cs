@@ -2,18 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using TimeKeeper.Services;
 using Xamarin.Forms;
 
 namespace TimeKeeper
 {
 	public partial class App : Application
 	{
+        private static Locator _locator;
+        public static Locator Locator
+        {
+            get
+            {
+                return _locator ?? (_locator = new Locator());
+            }
+        }
+
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new TimeKeeper.MainPage();
+            var navigationPage = new NavigationPage(new MainPage());
+            Locator.NavService.Initialize(navigationPage);
+            MainPage = navigationPage;
 		}
 
 		protected override void OnStart ()
